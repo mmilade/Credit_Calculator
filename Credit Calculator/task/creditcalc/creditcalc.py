@@ -30,8 +30,6 @@ else:
     print("Your selection is incorrect")
 
 
-
-
 # I don't understand why this is not working
 
 # def input_credit_principal():
