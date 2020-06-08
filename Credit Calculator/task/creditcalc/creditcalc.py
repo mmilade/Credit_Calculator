@@ -1,4 +1,6 @@
+# needed this package to use the ceil function to round up
 import math
+
 print("Enter the credit principal:")
 credit_principal = int(input())
 print("What do you want to calculate?")
@@ -9,12 +11,12 @@ choice = input()
 if choice == "p":
     print("Enter count of months:")
     num_of_months = int(input())
-    if credit_principal % num_of_months == 0:
+    if credit_principal % num_of_months == 0:  # check if number if month is a whole number
         monthly_payment = credit_principal/num_of_months
         print("Your monthly payment = " + str(monthly_payment))
     else:
-        monthly_payment = math.ceil(credit_principal / num_of_months)
-        last_payment = credit_principal - (num_of_months - 1) * monthly_payment
+        monthly_payment = math.ceil(credit_principal / num_of_months)  # ceil function rounds up
+        last_payment = credit_principal - (num_of_months - 1) * monthly_payment  # formula
         print("Your monthly payment = " + str(monthly_payment) + " with last month payment = " + str(last_payment))
 elif choice == "m":
     print("Enter monthly payment:")
